@@ -1,0 +1,236 @@
+*
+{
+    margin: 0;
+    padding:0;
+    font-family:fantasy;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #252839;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+ h2 
+{
+
+    position: relative;
+    font-size:4rem;
+    color: #25283900;
+    -webkit-text-stroke: .3vw #383d5200;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: opacity 2s ease-in-out forwards ;
+
+}
+
+
+@keyframes opacity{
+
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+ h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animateText 8s linear infinite;
+}
+
+
+
+
+@keyframes animateText {
+
+    0%,10%,100%{ width: 0; }
+    70%,90%{ width: 100%;}
+    
+}
+
+
+
+
+.banner
+{
+
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+
+flex-wrap: wrap;
+}
+
+.banner .blocks
+{
+
+    position: relative;
+    display: block;
+    width: 5vw;
+    height: 5vh;
+    animation: BlocksAnimation .75s ease-in-out forwards;
+   
+}
+
+.banner .blocks:nth-child(even){animation: BlocksAnimation 1s ease-in-out forwards;}
+
+.banner .blocks:nth-child(7n+1){animation: BlocksAnimation 2.5s ease-in-out forwards;}
+
+.banner .blocks:nth-child(7n+3){animation: BlocksAnimation 1.5s ease-in-out forwards;}
+
+@keyframes BlocksAnimation
+{
+    0%
+    { opacity:0; top:1000px;
+           
+        
+    }
+
+    50%{ opacity: 1;
+        background:url(./Prancheta1.jpg);
+        background-attachment: fixed;
+background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+
+    100%{ opacity: 1;
+         
+        top:0px;
+        
+        background:url(./Prancheta1.jpg);
+        background-attachment: fixed;
+         background-position: center;
+         background-size: contain;
+         background-repeat: no-repeat;
+ 
+        }
+}
+
+
+#bg
+{
+top: 0;
+position: absolute;
+width: 100%;
+height: 100vh;
+mix-blend-mode: hue;
+
+}
+
+
+
+
+@media only screen and (max-width: 578px)
+{
+
+
+    .banner .blocks
+{
+
+    position: relative;
+    display: block;
+    width: 5vw;
+    height: 5vh;
+    animation: BlocksAnimation2 .75s ease-in-out forwards;
+   
+}
+
+.banner .blocks:nth-child(even){animation: BlocksAnimation2 1s ease-in-out forwards;}
+
+.banner .blocks:nth-child(7n+1){animation: BlocksAnimation2 2.5s ease-in-out forwards;}
+
+.banner .blocks:nth-child(7n+3){animation: BlocksAnimation2 1.5s ease-in-out forwards;}
+
+@keyframes BlocksAnimation2
+{
+    0%
+    { opacity:0; top:1000px;
+           
+        
+    }
+
+    50%{ opacity: 1;
+        background:url(./Prancheta2.jpg);
+        background-attachment: fixed;
+background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+    100%{ opacity: 1;
+         
+        top:0px;
+        
+        background:url(./Prancheta2.jpg);
+        background-attachment: fixed;
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+ 
+        }
+}
+
+
+
+h2 
+{
+    opacity: 1;
+    position: relative;
+    font-size:2rem;
+    color: #252839e5;
+    -webkit-text-stroke: .3vw #383d52fd;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: opacity 2s ease-in-out forwards ;
+
+}
+
+
+ h2::before
+{
+    content: attr(data-text2);
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animateText 8s linear infinite;
+}
+
+
+
+
+/* @keyframes animateText {
+
+    0%,10%,100%{ width: 0; }
+    70%,90%{ width: 100%;}
+    
+} */
+
+
+}
